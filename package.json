@@ -1,0 +1,9 @@
+{
+  "name": "your-project-sub-domain-for-surge",
+  "student": "firstname_lastname",
+  "scripts": {
+    "start": "parcel-ip  && parcel src/index.html",
+    "deploy": "rimraf dist .cache && parcel build src/index.html && surge -d https://$npm_package_name.surge.sh dist",
+    "zip": "mv src $npm_package_student && cross-zip $npm_package_student $npm_package_student.zip && mv $npm_package_student src"
+  }
+}
